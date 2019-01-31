@@ -27,10 +27,47 @@
             </ul>
             <h4>Options</h4>
             <ol>
-                <li><strong>Autohide:</strong> false</li>
+                <li><strong>notHide:</strong> Boolean (default: false)</li>
+
+                <code>
+                        &lt
+                            FlashMessages 
+                                success={'Something went great'} 
+                                error={''}
+                                notHide={true}
+                        &gt
+                </code>
+
                 <li><strong>Timeout:</strong> milliseconds</li>
+
+                <code>
+                        &lt
+                            FlashMessages 
+                                success={'Something went great'} 
+                                error={''}
+                                timeout={10000}
+                        &gt
+                </code>
+
                 <li><strong>Style:</strong> Regular styled components values</li>
                 <li><strong>Color:</strong> Object with error or success custom text color</li>
+
+                <code>
+                        &lt
+                            FlashMessages 
+                                success={''} 
+                                error={'Something went wrong'}
+                                style={{
+                                    background: 'darkred',
+                                    border: '1px solid red',
+                                    borderRadius: '4px'
+                                }}
+                                color={{
+                                    error: '#fff'
+                                }}
+                        &gt
+                </code>
+
             </ol>
         </div>
     </body>
