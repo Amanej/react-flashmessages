@@ -7,6 +7,10 @@ import FlashMessage from './flashMessage';
 
 class FlashMessages extends Component {
 
+    componentDidUpdate(formerProps) {
+        // Pass props to state, and then clear state
+        // Set timeout 
+    }
 
     render () {
         if(this.props.error) {
