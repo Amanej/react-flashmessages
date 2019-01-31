@@ -5,3 +5,5 @@
 ## TODO
 
 ~~Add autohide timeout~~
+~~Optional autohide~~
+~~Add custom Styling~~
