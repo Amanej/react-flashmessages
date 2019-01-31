@@ -10,6 +10,8 @@
 
 ~~Optional autohide~~
 
+~~Custom timeout~~
+
 ~~Add custom Styling~~
 
 Prepare for NPM
