@@ -7,7 +7,7 @@ export default (props => {
         success: (props.color && props.color.success) ? props.color.success : '#2EC94F'
     }
     return (
-        <FlashMessage colors={colors} error={props.error}>{props.message}</FlashMessage>
+        <FlashMessage style={props.style} colors={colors} error={props.error}>{props.message}</FlashMessage>
     )
 }) 
 

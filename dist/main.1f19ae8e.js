@@ -28205,6 +28205,7 @@ var _default = function _default(props) {
     success: props.color && props.color.success ? props.color.success : '#2EC94F'
   };
   return _react.default.createElement(FlashMessage, {
+    style: props.style,
     colors: colors,
     error: props.error
   }, props.message);
@@ -28280,31 +28281,45 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log('componentDidMount', this.props); // Pass props to state, and then clear state
+      console.log('componentDidMount', this.props); //const messageValues = {error,success} = this.props
+      // Pass props to state, and then clear state
 
-      this.setState(this.props); // Set timeout 
+      this.setState({
+        error: this.props.error,
+        success: this.props.success
+      });
 
-      setTimeout(function () {
-        _this2.setState({
-          error: '',
-          success: ''
-        });
-      }, 1500);
+      if (!this.props.notHide) {
+        // Set timeout 
+        setTimeout(function () {
+          _this2.setState({
+            error: '',
+            success: ''
+          });
+        }, this.props.timeout || 1500);
+      }
     }
   }, {
     key: "render",
     value: function render() {
       var _this$state = this.state,
           error = _this$state.error,
-          success = _this$state.success; //return <FlashMessage success={this.props.success} message={this.props.message} />
+          success = _this$state.success;
+      var _this$props = this.props,
+          style = _this$props.style,
+          color = _this$props.color; //return <FlashMessage success={this.props.success} message={this.props.message} />
 
       if (error) {
         return _react.default.createElement(_flashMessage.default, {
+          style: style,
+          color: color,
           error: error,
           message: error
         });
       } else if (success) {
         return _react.default.createElement(_flashMessage.default, {
+          style: style,
+          color: color,
           success: success,
           message: success
         });
@@ -28414,7 +28429,23 @@ function (_React$Component) {
       }, "Add success"), _react.default.createElement("h3", null, "Autohide false"), _react.default.createElement(_index.default, {
         success: '',
         error: 'This error should persist.',
-        autoHide: false
+        notHide: true
+      }), _react.default.createElement("h3", null, "Custom Timeout: 10 seconds"), _react.default.createElement(_index.default, {
+        success: '',
+        error: 'This error should persist.',
+        timeout: 10000
+      }), _react.default.createElement("h3", null, "Styling"), _react.default.createElement(_index.default, {
+        success: '',
+        error: 'This error should persist.',
+        notHide: true,
+        style: {
+          background: 'darkred',
+          border: '1px solid red',
+          borderRadius: '4px'
+        },
+        color: {
+          error: '#fff'
+        }
       }));
     }
   }]);

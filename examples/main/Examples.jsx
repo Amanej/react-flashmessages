@@ -48,7 +48,22 @@ class Examples extends React.Component {
                 >Add success</button>
                 <h3>Autohide false</h3>
                 <FlashMessages 
-                        success={''} error={'This error should persist.'} autoHide={false} />
+                        success={''} error={'This error should persist.'} notHide={true} />
+                <h3>Custom Timeout: 10 seconds</h3>
+                <FlashMessages 
+                        success={''} error={'This error should persist.'} timeout={10000} />
+                <h3>Styling</h3>
+                <FlashMessages 
+                    success={''} error={'This error should persist.'} notHide={true} 
+                    style={{
+                        background: 'darkred',
+                        border: '1px solid red',
+                        borderRadius: '4px'
+                    }}
+                    color={{
+                        error: '#fff'
+                    }}
+                />
             </>
         )
     }
