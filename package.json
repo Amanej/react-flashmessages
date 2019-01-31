@@ -7,8 +7,6 @@
     "example": "examples"
   },
   "scripts": {
-    "start": "webpack --watch",
-    "exampleDev": "webpack-dev-server --open",
     "dev": "parcel examples/main/index.html",
     "build": "parcel build examples/main/index.html --no-source-maps",
     "test": "mocha"
