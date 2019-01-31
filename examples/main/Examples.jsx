@@ -51,7 +51,7 @@ class Examples extends React.Component {
                         success={''} error={'This error should persist.'} notHide={true} />
                 <h3>Custom Timeout: 10 seconds</h3>
                 <FlashMessages 
-                        success={''} error={'This error should persist.'} timeout={10000} />
+                        success={''} error={'This error should persist for 10 seconds.'} timeout={10000} />
                 <h3>Styling</h3>
                 <FlashMessages 
                     success={''} error={'This error should persist.'} notHide={true} 

@@ -11,3 +11,6 @@
 ~~Optional autohide~~
 
 ~~Add custom Styling~~
+
+Prepare for NPM
+Prepare for Yarn
