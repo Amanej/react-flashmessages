@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Main Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <h2>Quick demo</h2>
+        <div id="app"></div>
+        <div>
+            <h3>Usage</h3>
+            <code>
+                    import FlashMessages from "FlashMessages"
+                    </br>
+                    ...
+                    </br>
+                    &lt
+                        FlashMessages 
+                            success={'Something went great'} 
+                            error={'Something went wrong'} 
+                    &gt
+            </code>
+            <ul>
+                <li>It prioritizes error over success in a single rendered component</li>
+                <li>You only need to pass it success or error as string</li>
+                <li>By default it empties its own state, but passing autoHide: false as a prop, it will not empty the state until the message is removed.</li>
+            </ul>
+            <h4>Options</h4>
+            <ol>
+                <li><strong>Autohide:</strong> false</li>
+                <li><strong>Style:</strong> Regular styled components values</li>
+                <li><strong>Color:</strong> Object with error or success custom text color</li>
+            </ol>
+        </div>
+    </body>
+
+    <script src="main.js"></script>
+
+    <style>
+        code {
+            background: black;
+            color: green;
+            padding: 12px 20px;
+            font-size: 16px;
+            display: block;
+        }
+    </style>
+
+</html>
