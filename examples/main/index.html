@@ -14,11 +14,10 @@
                     </br>
                     ...
                     </br>
-                    &lt
-                        FlashMessages 
-                            success={'Something went great'} 
-                            error={'Something went wrong'} 
-                    &gt
+                    &ltFlashMessages </br>
+                            success={'Something went great'} </br>
+                            error={'Something went wrong'} </br>
+                    /&gt
             </code>
             <ul>
                 <li>It prioritizes error over success in a single rendered component</li>
@@ -30,24 +29,22 @@
                 <li><strong>notHide:</strong> Boolean (default: false)</li>
                 </br>
                 <code>
-                        &lt
-                            FlashMessages 
+                        &ltFlashMessages 
                                 success={'Something went great'} 
                                 error={''}
                                 notHide={true}
-                        &gt
+                        /&gt
                 </code>
                 </br>
 
                 <li><strong>Timeout:</strong> milliseconds</li>
                 </br>
                 <code>
-                        &lt
-                            FlashMessages 
+                        &ltFlashMessages 
                                 success={'Something went great'} 
                                 error={''}
                                 timeout={10000}
-                        &gt
+                        /&gt
                 </code>
                 </br>
 
@@ -55,8 +52,7 @@
                 <li><strong>Color:</strong> Object with error or success custom text color</li>
                 </br>
                 <code>
-                        &lt
-                            FlashMessages 
+                        &ltFlashMessages 
                                 </br>
                                 success={''} 
                                 </br>
@@ -73,7 +69,7 @@
                                     error: '#fff'
                                 }}
                                 </br>
-                        &gt
+                        /&gt
                 </code>
                 </br>
             </ol>
